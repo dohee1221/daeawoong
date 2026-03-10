@@ -144,6 +144,10 @@ html > body button {
     line-height: 100%;
 }
 
+.top-bar__menu > li:hover > a {
+    text-decoration: underline;
+}
+
 .top-bar__menu > li:last-child > a {
     display: flex;
     gap: 2px;
@@ -345,6 +349,7 @@ html > body button {
     visibility: hidden;
     transform: translateY(-100%);
     transition: all .5s; 
+    padding: 75.25px 0;
 }
 
 .top-bar__site-map-modal.open {
