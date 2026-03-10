@@ -451,3 +451,77 @@ html > body button {
 
 /* -------------- mobile 버전 끝 ------------- */
 /*--------------- 헤더 끝 ---------------*/
+
+/*--------------- 메인 시작 ---------------*/
+/* 메인 공통 시작  */
+.main_con {
+    width: 100%;
+    max-width: 1260px;
+    min-height: calc(100vh - 468px);
+    padding: 126px 0 160px;
+    margin: 0 auto;
+}
+
+.main_sec:first-child {
+    padding-top: 0;
+}
+
+.main_sec {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 120px 0;
+}
+
+.main_contents {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+/* 메인 공통 끝  */
+.main_sec1 > .issue_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 618px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.main_sec1 > .issue_box > .img_box {
+    position: relative;
+    height: 534px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.main_sec1 > .issue_box > .img_box > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .3s;
+}
+
+.main_sec1 > .issue_box:hover > .img_box > img {
+    transform: scale(1.2);
+    transform-origin: center center;
+    transition: all .3s;
+}
+
+.main_sec1 > .issue_box > .txt_box {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+    height: 190px;
+    padding: 32px;
+    background-color: #363030;
+    border: 1px solid red;
+}
+
+/* 메인 - 섹션 1 시작  */
+
+/* 메인 - 섹션 1 끝  */
+/*--------------- 메인 끝 ---------------*/
