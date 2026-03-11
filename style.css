@@ -480,7 +480,7 @@ html > body button {
 }
 
 /* 메인 공통 끝  */
-.main_sec1 > .issue_box {
+.main_sec1  .issue_box {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -489,38 +489,50 @@ html > body button {
     overflow: hidden;
 }
 
-.main_sec1 > .issue_box > .img_box {
+.main_sec1  .issue_box > .img_box {
     position: relative;
     height: 534px;
     background-color: #fff;
     overflow: hidden;
 }
 
-.main_sec1 > .issue_box > .img_box > img {
+.main_sec1  .issue_box > .img_box > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all .3s;
 }
 
-.main_sec1 > .issue_box:hover > .img_box > img {
+.main_sec1  .issue_box:hover > .img_box > img {
     transform: scale(1.2);
     transform-origin: center center;
     transition: all .3s;
 }
 
-.main_sec1 > .issue_box > .txt_box {
+.main_sec1  .issue_box > .txt_box {
     position: relative;
     display: inline-flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap: 16px;
     height: 190px;
     padding: 32px;
     background-color: #363030;
 }
 
-.main_sec1 > .issue_box > .txt_box > .title {
+.main_sec1  .issue_box > .txt_box::after {
+    content: "";
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    width: 24px;
+    height: 24px;
+    background-image: url(/images/imgi_arrow\(white\).svg);
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.main_sec1  .issue_box > .txt_box > .title {
     position: relative;
     width: 100%;
     color: #fff;
