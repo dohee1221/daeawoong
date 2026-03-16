@@ -75,7 +75,8 @@ html > body button {
     left: 0;
     width: 100%;
     height: 86px;
-    position: relative; 
+    position: relative;
+    z-index: 999;
 }
 /* 헤더 - 공용 탑바 끝 */
 
@@ -480,13 +481,12 @@ main {
     display: flex;
     justify-content: center;
     gap: 24px;
-    border: 1px solid red;
 }
 
 /* 메인 공통 끝  */
 
 /* ----------- 메인 섹션 1 시작--------------- */
-/* 메인 - .issue_box, .cont_box 시작 */
+/* 메인 - .issue_box 시작 */
 
 .main_contents > .issue_box,
 .main_contents > .cont_box {
@@ -496,7 +496,7 @@ main {
     border-radius: 12px;
     overflow: hidden;
 }
-
+       
 .main_contents > .issue_box > .img_box {
     position: relative;
     height: 534px;
@@ -529,9 +529,9 @@ main {
 
 .main_contents > .issue_box > .txt_box {
     position: relative;
-    /* display: inline-flex;
+    display: inline-flex;
     flex-direction: column;
-    gap: 16px; */
+    gap: 16px;
     height: 190px;
     padding: 32px;
     background-color: #363030;
@@ -544,12 +544,13 @@ main {
     right: 32px;
     width: 24px;
     height: 24px;
-    background-image: url(../daeawoong/images/imgi_arrow\(white\).svg);
+    background-image: url(images/imgi_arrow_white_.svg);
     background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    border: 1px solid red;
-    
+}
+
+.main_contents > .issue_box:hover > .txt_box::after {
+    background-image: url(images/imgi_arrow_hover.color_.svg);
+    background-size: 24px 24px;
 }
 
 .main_contents > .issue_box > .txt_box > .title {
@@ -569,11 +570,94 @@ main {
     word-break: keep-all;
 }
     
+.main_contents .issue_box:hover > .txt_box  > .title {
+    text-decoration: underline;
+    color: #ff5026;
+    transition: all .3s;
+}
 
+/* 메인 - .issue_box 끝 */
+        
+/* 메인 - .cont_box 시작 */
+.main_contents > .cont_box {
+    gap: 24px;
+}
 
+.main_contents > .cont_box > .press_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 618px;
+    height: 343px;
+    border-radius: 12px;
+    overflow: hidden;
+}
 
+.main_contents > .cont_box > .press_box::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 54.22%, rgba(0, 0, 0, .4));
+    z-index: 1;
+}   
 
-/* 메인 - .issue_box  */
+.main_contents > .cont_box > .press_box:hover::after {
+    background: rgba(0, 0, 0, .4);
+}
+
+.main_contents > .cont_box > .press_box > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transform-origin: center center;
+    transition: all .3s;
+}
+
+.main_contents > .cont_box > .press_box:hover > img {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.main_contents > .cont_box > .press_box > .home_title,
+.main_contents > .cont_box > .press_box > .home_text {
+    position: relative;
+    padding: 32px;
+    color: #fff;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -.36px;
+}
+
+.main_contents > .cont_box > .press_box:hover > .home_text {
+    text-decoration: underline;
+    transition: all .3s;
+}
+/* 메인 - .cont_box 끝 */
+
+/* 메인 - .row 시작 */
+.main_contents > .cont_box > .row {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.main_contents > .cont_box > .row > .left_box,
+.main_contents > .cont_box > .row > .right_box {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    gap: 24px;
+}
+/* 메인 - .row 끝 */
 
 /* ----------- 메인 섹션 1 끝--------------- */
 
