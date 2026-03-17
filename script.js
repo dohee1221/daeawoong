@@ -36,3 +36,17 @@ $('.top-bar-menu__npall .btn').click(function(){
 
     $topBar.find('.top-bar__site-map-modal').toggleClass('open');
 });
+
+//main_secton_01 스와이퍼
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      }
+    });

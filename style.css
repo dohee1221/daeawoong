@@ -166,7 +166,7 @@ html > body button {
 .top-bar-menu__npall {
     height: 100%;
     width: 215px;
-    z-index: 999;
+    z-index: 998;
 }
 .top-bar-menu__npall > ul {
     display: flex;
@@ -657,6 +657,47 @@ main {
     flex: 1 1;
     gap: 24px;
 }
+
+.main_contents > .cont_box > .row > .left_box > *,
+.main_contents > .cont_box > .row > .right_box > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 297px;
+    height: 167px;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.main_contents > .cont_box > .row > .left_box > .stock_box {
+    background-color: #f8f8f8;
+}
+
+.main_contents > .cont_box > .row > .left_box .home_title ,
+.main_contents > .cont_box > .row > .right_box .home_title {
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -.36px;
+}
+
+
+.main_contents > .cont_box > .row > .left_box .home_title::after ,
+.main_contents > .cont_box > .row > .right_box .home_title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url(images/img_40.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+    
+
 /* 메인 - .row 끝 */
 
 /* ----------- 메인 섹션 1 끝--------------- */
