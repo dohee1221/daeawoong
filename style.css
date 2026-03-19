@@ -458,6 +458,11 @@ html > body button {
 main {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .main_con {
@@ -678,6 +683,9 @@ main {
     letter-spacing: -.36px;
 }
 
+.main_contents .row > .left_box > .stock_box {
+    background-color: #f8f8f8;
+}
 
 .main_contents > .cont_box > .row > .left_box .home_title::after ,
 .main_contents > .cont_box > .row > .right_box .home_title::after {
@@ -690,10 +698,6 @@ main {
     background-image: url(images/img_40.svg);
     background-repeat: no-repeat;
     background-position: 50%;
-}
-
-.main_contents .row > .left_box > .stock_box {
-    background-color: #f8f8f8;
 }
 
 .main_contents .row > .left_box .swiper {
