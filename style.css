@@ -631,8 +631,8 @@ main {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-.main_contents > .cont_box > .press_box > .home_title,
-.main_contents > .cont_box > .press_box > .home_text {
+.main_contents > .cont_box  .home_title,
+.main_contents > .cont_box .home_text {
     position: relative;
     padding: 32px;
     color: #fff;
@@ -651,7 +651,6 @@ main {
 /* 메인 - .row 시작 */
 .main_contents > .cont_box > .row {
     display: flex;
-    flex-direction: row;
     gap: 24px;
 }
 
@@ -674,15 +673,6 @@ main {
     border-radius: 12px;
 }
 
-.main_contents > .cont_box > .row > .left_box .home_title ,
-.main_contents > .cont_box > .row > .right_box .home_title {
-    position: relative;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 100%;
-    letter-spacing: -.36px;
-}
-
 .main_contents .row > .left_box > .stock_box {
     background-color: #f8f8f8;
 }
@@ -700,57 +690,6 @@ main {
     background-position: 50%;
 }
 
-.main_contents .row > .left_box .swiper {
-    width: 100%;
-}
-
-.main_contents .row > .left_box .swiper .swiper-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: flex;
-    transition-property: transform;
-    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
-    box-sizing: content-box;
-}
-
-.main_contents .row > .left_box .swiper .swiper-wrapper .swiper-slide {
-    flex-shrink: 0;
-}
-
-.main_contents .row > .left_box .swiper .swiper-wrapper .swiper-slide .home_stock {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;  
-}
-
-.main_contents .swiper .swiper-wrapper .home_stock_name {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: -.36px;
-    color: #201d1d;
-}
-
-.main_contents  .swiper .swiper-wrapper .home_stock_price {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: -.64px;
-}
-   
-.main_contents .swiper .swiper-wrapper .swiper-slide .home_stock-result {
-    position: relative;
-    padding-left: 15px;
-}
-
-.main_contents .swiper .swiper-wrapper .swiper-slide .home_stock-result span {
-    display: block;
-}
-
 .main_contents .row > .left_box > .what_new_box {
     background-color: #ff5026;
 }
@@ -765,19 +704,14 @@ main {
 
 .main_contents .row > .left_box > .what_new_box > .home_text {
     margin: 10px 0;
-    color: #fff;
-    font-size: 18px;
     font-weight: 500;
     line-height: 140%;
-    letter-spacing: -.36px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    white-space: normal;
     overflow: hidden;
     word-break: keep-all;
 }
-
 
 /* 메인 - .row 끝 */
 
