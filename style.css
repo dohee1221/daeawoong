@@ -588,11 +588,11 @@ main {
 /* 메인 - .issue_box 끝 */
         
 /* 메인 - .cont_box 시작 */
-.main_contents > .cont_box {
+.main_sec1 .main_contents > .cont_box {
     gap: 24px;
 }
 
-.main_contents > .cont_box > .press_box {
+.main_sec1 .main_contents > .cont_box > .press_box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -603,7 +603,7 @@ main {
     overflow: hidden;
 }
 
-.main_contents > .cont_box > .press_box::after {
+.main_sec1 .main_contents > .cont_box > .press_box::after {
     content: "";
     position: absolute;
     left: 0;
@@ -820,9 +820,173 @@ main {
     z-index: 2;
     margin: 0;
 }
-
 /* 메인 - .row 끝 */
 
 /* ----------- 메인 섹션 1 끝--------------- */
+/* 메인 - .main_cont_box 시작  */
+.main_sec2 .main_cont_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 80px;
+    width: 618px;
+}
+
+.main_sec2 .main_cont_box .tetle_box,
+.main_sec2 .main_cont_box .list_box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main_sec2 .main_cont_box .tetle_box {
+    font-weight: 600;
+    color: #201d1d;
+}
+
+.main_sec2 .main_cont_box .list_box {
+    width: 618px;
+}
+
+.main_sec2 .main_cont_box .tetle_box > .sub_title {
+    font-size: 18px;
+    letter-spacing: -.36px;
+}
+
+.main_sec2 .main_cont_box .tetle_box > .sub_title >span:nth-child(2) {
+    color: #ff5026;
+}
+
+.main_sec2 .main_cont_box .tetle_box > .main_2_title {
+    font-size: 40px;
+    line-height: 140%;
+    letter-spacing: -.88px;
+} 
+
+.main_sec2 .main_cont_box .list_box > .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 37px 32px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.main_sec2 .main_cont_box .list_box > .list.active {
+    background-color: #f8f8f8;
+    backdrop-filter: blur(60px);
+    text-decoration: underline;
+}
+
+.main_sec2 .main_cont_box  .list > .name {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -.28px;
+}
+
+.main_sec2 .main_cont_box  .list .main_color {
+    color: #ff5026;
+}
+
+.main_sec2 .main_cont_box  .list .list_cont {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: -.4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+}
+
+/* 메인 - .main_cont_box 끝  */
+
+/* 메인 - .imgs_cont 시작  */
+.main_sec2 .imgs_cont {
+    position: relative;
+    width: 618px;
+}
+
+.main_sec2 .imgs_cont > .view_box {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 618px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: opacity .5s ease, visibility .5s ease;
+}
+
+.main_sec2 .imgs_cont .view_img_box {
+    position: relative;
+    height: 536px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.main_sec2 .imgs_cont > .view_box  img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: none;
+    height: 100%;
+    transform: translateX(-50%);
+    object-fit: cover;
+}
+
+.main_sec2 .imgs_cont .view_text_box {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    height: 142px;
+    padding: 39px 40px;
+    background-color: #363030;
+}
+
+.main_sec2 .imgs_cont .view_text_box .view_text {
+    position: relative;
+    padding-right: 50px;
+    color: #f8f8f8;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 160%;
+    letter-spacing: -.4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: keep-all;
+}
+
+.main_sec2 .imgs_cont:hover .view_text_box .view_text {
+    text-decoration: underline;
+}
+
+.main_sec2 .imgs_cont .view_text_box .view_text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url(images/imgi_arrow_white_.svg);
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: translateY(-50%);
+}
+    
+/* 메인 - .swiper_box 끝  */
+
+/* ----------- 메인 섹션 2 시작--------------- */
+
+/* ----------- 메인 섹션 2 끝--------------- */
 
 /*--------------- 메인 끝 ---------------*/
