@@ -37,16 +37,19 @@ $('.top-bar-menu__npall .btn').click(function(){
     $topBar.find('.top-bar__site-map-modal').toggleClass('open');
 });
 
-//main_secton_01 스와이퍼
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      }
+    //main_sec2 hover
+
+    var i = 0;
+    $('.main_sec2 .main_cont_box .list').hover(function(){
+        let $this = $(this);
+
+        $('.main_sec2 .main_cont_box .list').removeClass('active');
+        $this.addClass('active');
+
+        let i = $this.index();
+
+        $('.imgs_cont > .view_box').removeClass('on');
+        $('.imgs_cont > .view_box').eq(i).addClass('on');
+
     });
+
