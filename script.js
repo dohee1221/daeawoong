@@ -40,7 +40,7 @@ $('.top-bar-menu__npall .btn').click(function(){
     //main_sec2 hover
 
     var i = 0;
-    $('.main_sec2 .main_cont_box .list').hover(function(){
+    $('.main_sec2 .main_cont_box .list').mouseenter(function(){
         let $this = $(this);
 
         $('.main_sec2 .main_cont_box .list').removeClass('active');
@@ -52,4 +52,21 @@ $('.top-bar-menu__npall .btn').click(function(){
         $('.imgs_cont > .view_box').eq(i).addClass('on');
 
     });
+
+    //.main_sec3 
+    $(function() {
+    $('.components_custom>li').on('mouseenter', function() {
+        let $this = $(this);
+        
+        if ($this.hasClass('hover')) return;
+
+        $('.components_custom>li').removeClass('hover');
+        $this.addClass('hover');
+
+        let t = $this.index();
+        $('.sec3_box > a').removeClass('actived');
+        $('.sec3_box > a').eq(t).addClass('actived');
+    });
+});
+    
 
