@@ -35,6 +35,8 @@ $('.top-bar-menu__npall .btn').click(function(){
     let $topBar = $this.closest('.top-bar');
 
     $topBar.find('.top-bar__site-map-modal').toggleClass('open');
+    
+    $('body').toggleClass('is-locked');
 });
 
     //main_sec2 hover

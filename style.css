@@ -80,8 +80,8 @@ html > body button {
     left: 0;
     width: 100%;
     height: 86px;
-    position: relative;
     z-index: 999;
+    background-color: #fff;
 }
 /* 헤더 - 공용 탑바 끝 */
 
@@ -306,7 +306,6 @@ html > body button {
     width: 1136px;
     padding: 86px 0 32.5px;
     transform: translateX(-50%);
-   
 }
 
 .top-bar_depth:nth-child(1),
@@ -346,6 +345,11 @@ html > body button {
 /* 헤더 - depth-wrap 끝 */
 
 /* 헤더 - site-map-modal 시작 */
+body.is-locked {
+    overflow: hidden;
+    height: 100%; 
+}
+
 .top-bar__site-map-modal {
     position: fixed;
     top: 0;
@@ -838,14 +842,14 @@ main {
     width: 618px;
 }
 
-.main_sec .main_cont_box .tetle_box,
+.main_sec .main_cont_box .title_box,
 .main_sec2 .main_cont_box .list_box {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.main_sec .main_cont_box .tetle_box {
+.main_sec .main_cont_box .title_box {
     font-weight: 600;
     color: #201d1d;
 }
@@ -854,16 +858,16 @@ main {
     width: 618px;
 }
 
-.main_sec .main_cont_box .tetle_box > .sub_title {
+.main_sec .main_cont_box .title_box > .sub_title {
     font-size: 18px;
     letter-spacing: -.36px;
 }
 
-.main_sec .main_cont_box .tetle_box > .sub_title > span:nth-child(2) {
+.main_sec .main_cont_box .title_box > .sub_title > span:nth-child(2) {
     color: #ff5026;
 }
 
-.main_sec .main_cont_box .tetle_box > .main_title {
+.main_sec .main_cont_box .title_box > .main_title {
     font-size: 40px;
     line-height: 140%;
     letter-spacing: -.88px;
@@ -1021,10 +1025,10 @@ main {
     z-index: 2;  
 }
 
-.main_sec3 .main_cont_box .tetle_box {
+.main_sec3 .main_cont_box .title_box {
     width: 642px;
     height: 282px;
-    border-radius: 12px;
+    border-radius: 12px 0;
 }
 /* 메인3- .main_cont_box 끝 */
 
