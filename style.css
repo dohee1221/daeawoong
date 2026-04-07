@@ -500,6 +500,83 @@ main {
     gap: 24px;
 }
 
+.main_home_floating {
+    position: fixed;
+    top: 166px;
+    left: calc(50% - 630px - 104px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.main_home_floating > button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+    width: 80px;
+    height: 80px;
+    color: gray;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -.24px;
+    background-color: #f8f8f8;
+    transition: color .3s ease, background-color .3s ease;
+    border: transparent;
+}
+
+.main_home_floating > button.on {
+    color: #fff;
+    background-color: #ff5026;
+}
+
+.main_home_floating > button > span {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+    transition: background-image .3s ease, filter .3s ease;
+}
+
+.main_home_floating > .floation___main_sec1 > span {
+    width: 20px;
+    height: 20px;
+    background-image: url(images/);
+    /* 여기부터 다시하기-> 이미지 다운 받기 */
+}
+
+.main_home_floating > .floation___main_sec1.on > span {
+    width: 24px;
+    height: 24px;
+    background-image: url(images/imgi_20_floatingNewsWhite.svg);
+}
+
+.main_home_floating > .floation___main_sec2 > span {
+    width: 24px;
+    height: 24px;
+    background-image: url(images/imgi_21_floatingCultureGray.svg);
+}
+
+.main_home_floating > .floation___main_sec3 > span {
+    width: 24px;
+    height: 24px;
+    background-image: url(images/imgi_22_floatingBusinessGray.svg);
+}
+
+.main_home_floating > .floation___main_sec4 > span {
+    width: 20px;
+    height: 20px;
+    background-image: url(images/imgi_23_floatingGuideGray.svg);
+}
+
 /* 메인 공통 끝  */
 
 /* ----------- 메인 섹션 1 시작--------------- */
@@ -1409,7 +1486,7 @@ main {
     gap: 8px;
     width: 970px;
 }
-    
+
 .footer_infor-menu > .footer_manu-wrap {
     display: flex;
     gap: 40px;
@@ -1441,21 +1518,10 @@ main {
 /* 푸터 - .footer_infor-menu  끝 */
 
 /* 푸터 - .footer_content-box  시작 */
-.footer_content-box {
+.footer_content-box,
+.footer_content-box > .footer_content {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 40px;
-}
-
-.footer_content {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: nowrap;
     gap: 40px;
 }
 
