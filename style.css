@@ -48,6 +48,10 @@ a {
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ---------------노말라이즈 끝--------------- */
 
 /* ---------------폰트 적용--------------- */
@@ -488,6 +492,7 @@ main {
     position: relative;
     width: 100%;
     padding: 120px 0;
+    scroll-margin-top: 126px;
 }
 
 .main_sec:last-child {
@@ -514,7 +519,7 @@ main {
     z-index: 100;
 }
 
-.main_home_floating > button {
+.main_home_floating > a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -530,15 +535,24 @@ main {
     letter-spacing: -.24px;
     background-color: #f8f8f8;
     transition: color .3s ease, background-color .3s ease;
-    border: transparent;
+    border: none;
 }
 
-.main_home_floating > button.on {
+.main_home_floating > a.on {
     color: #fff;
     background-color: #ff5026;
 }
 
-.main_home_floating > button > span {
+.main_home_floating > a:hover {
+    color: #ff5026;
+}
+
+.main_home_floating > a.on:hover {
+    color: #fff;
+}
+
+.main_home_floating > a::before {
+    content: ''; 
     display: block;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -546,35 +560,52 @@ main {
     transition: background-image .3s ease, filter .3s ease;
 }
 
-.main_home_floating > .floation___main_sec1 > span {
+.main_home_floating > .floation___main_sec1::before {
     width: 20px;
     height: 20px;
-    background-image: url(images/);
-    /* 여기부터 다시하기-> 이미지 다운 받기 */
+    background-image: url('images/floatingNewsGray.svg');
+}
+.main_home_floating > .floation___main_sec1:hover::before {
+    background-image: url('images/floatingNewsPrimary.svg');
+}
+.main_home_floating > .floation___main_sec1.on::before {
+    background-image: url('images/imgi_20_floatingNewsWhite.svg');
 }
 
-.main_home_floating > .floation___main_sec1.on > span {
+.main_home_floating > .floation___main_sec2::before {
     width: 24px;
     height: 24px;
-    background-image: url(images/imgi_20_floatingNewsWhite.svg);
+    background-image: url('images/imgi_21_floatingCultureGray.svg');
+}
+.main_home_floating > .floation___main_sec2:hover::before {
+    background-image: url('images/floatingCulturePrimary.svg');
+}
+.main_home_floating > .floation___main_sec2.on::before {
+    background-image: url('images/floatingCultureWhite.svg');
 }
 
-.main_home_floating > .floation___main_sec2 > span {
+.main_home_floating > .floation___main_sec3::before {
     width: 24px;
     height: 24px;
-    background-image: url(images/imgi_21_floatingCultureGray.svg);
+    background-image: url('images/imgi_22_floatingBusinessGray.svg');
+}
+.main_home_floating > .floation___main_sec3:hover::before {
+    background-image: url('images/floatingBusinessPrimary.svg');
+}
+.main_home_floating > .floation___main_sec3.on::before {
+    background-image: url('images/floatingBusinessWhite.svg');
 }
 
-.main_home_floating > .floation___main_sec3 > span {
-    width: 24px;
-    height: 24px;
-    background-image: url(images/imgi_22_floatingBusinessGray.svg);
-}
-
-.main_home_floating > .floation___main_sec4 > span {
+.main_home_floating > .floation___main_sec4::before {
     width: 20px;
     height: 20px;
-    background-image: url(images/imgi_23_floatingGuideGray.svg);
+    background-image: url('images/imgi_23_floatingGuideGray.svg');
+}
+.main_home_floating > .floation___main_sec4:hover::before {
+    background-image: url('images/floatingGuidePrimary.svg');
+}
+.main_home_floating > .floation___main_sec4.on::before {
+    background-image: url('images/floatingGuideWhite.svg');
 }
 
 /* 메인 공통 끝  */
@@ -1255,8 +1286,7 @@ main {
 
 /* ----------- 메인 섹션 4 시작 --------------- */
 .main_sec4 {
-    margin-top: 240px;
-    /* padding: 120px 0 160px 0; */
+    margin-top: 360px;
 }
 
 .main_sec4 .infor_cont_box {
