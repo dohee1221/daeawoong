@@ -501,10 +501,6 @@ main {
     scroll-margin-top: 126px;
 }
 
-.main_sec:last-child {
-    padding: 0;
-}
-
 .main_contents {
     display: flex;
     justify-content: center;
@@ -518,8 +514,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: nowrap;
     border-radius: 12px;
     overflow: hidden;
     z-index: 100;
@@ -627,7 +621,7 @@ main {
     border-radius: 12px;
     overflow: hidden;
 }
-       
+
 .main_contents > .issue_box > .img_box {
     position: relative;
     height: 534px;
@@ -948,6 +942,10 @@ main {
 
 /* ----------- 메인 섹션 2 시작--------------- */
 
+.main_sec2 {
+    scroll-margin-top: 115px;
+}
+
 /* 메인 - .main_cont_box 시작  */
 .main_sec2 .main_cont_box {
     display: flex;
@@ -1124,6 +1122,7 @@ main {
 .main_sec3 {
     height: 518px;
     padding: 120px 0;
+    scroll-margin-top: 86px;
 }
 
 .main_sec3 > .main_contents {
@@ -1293,6 +1292,8 @@ main {
 /* ----------- 메인 섹션 4 시작 --------------- */
 .main_sec4 {
     margin-top: 360px;
+    padding: 0;
+    scroll-margin-top: 230px;
 }
 
 .main_sec4 .infor_cont_box {
@@ -1350,7 +1351,7 @@ main {
     content: "";
     width: 16px;
     height: 16px;
-    background-image: url(../images/imgi_infor_arrow.svg);
+    background-image: url(images/footer_arrow_gray.svg);
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -1521,7 +1522,6 @@ main {
     flex-direction: column;
     gap: 8px;
     width: 970px;
-    justify-content: space-between;
 }
 
 .footer_infor-menu > .footer_manu-wrap {
