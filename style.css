@@ -87,7 +87,13 @@ html > body button {
     height: 86px;
     z-index: 999;
     background-color: #fff;
+    transition: top 1s;
 }
+
+.top-bar.nav-up {
+    top: -86px; 
+}
+
 /* 헤더 - 공용 탑바 끝 */
 
 /* 헤더- 공용 로고 시작 */
@@ -1515,6 +1521,7 @@ main {
     flex-direction: column;
     gap: 8px;
     width: 970px;
+    justify-content: space-between;
 }
 
 .footer_infor-menu > .footer_manu-wrap {

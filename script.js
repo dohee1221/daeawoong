@@ -1,3 +1,21 @@
+//top-bar 스크롤 감지
+$(function(){
+  let lastScrollTop = 0;
+  const delta = 15;
+
+  $(window).scroll(function(event){
+    const st = $(this).scrollTop();
+    if(Math.abs(lastScrollTop - st) <= delta) return;
+    
+    if((st > lastScrollTop) && (lastScrollTop > 0)) {
+      $('.top-bar').addClass('nav-up');
+    } else {
+      $('.top-bar').removeClass('nav-up');
+    }
+    lastScrollTop = st;
+  });
+});
+
 // customer_menu 열고 닫기
 $('.top-bar-menu__npall > ul > li:nth-child(1), .top-bar-menu__npall > ul > li:nth-child(2)').click(function(){
 
