@@ -54,7 +54,7 @@ html {
 
 /* ---------------노말라이즈 끝--------------- */
 
-/* ---------------폰트 적용--------------- */
+/* ---------------폰트 적용 시작--------------- */
 html,
 html > body,
 html > body input,
@@ -64,17 +64,9 @@ html > body button {
     font-family: "Pretendard";
 }
 
-@media ( max-width:1200px ) {
-    .pc-top-bar {
-    display:none;
-    }
-}
+/* ---------------폰트 적용 끝--------------- */
 
-@media ( min-width:1201px ) {
-    .mobile-top-bar {
-    display:none;
-    }
-}
+/* ---------------미디어 쿼리 끝--------------- */
 
 /*--------------- 헤더 시작 ---------------*/
 /* 공통속성 */
@@ -468,12 +460,129 @@ body.is-locked {
 /* 헤더 - site-map-modal 끝 */
 /* -------------- pc버전 끝 ------------- */
 
+/* -------------- tablet 버전 시작 ------------- */
+
+@media ( max-width:1200px ) {
+
+    .top-bar {   
+        height: 7.1666666667vw;
+        padding: 0 2.6666666667vw;
+    }
+
+    .top-bar > .con {
+        height: 7.1666666667vw;
+        gap: 1.6666666667vw;
+    }
+
+    .top-bar__menu-box {
+        display: none;
+    }
+
+    .top-bar-menu__npall > ul {
+        gap: .6666666667vw;
+    }
+
+    .top-bar-menu__npall > ul > li:first-child {
+        visibility: hidden;  
+    }
+
+    .top-bar-menu__npall > ul ul > li:last-child {
+        border: 0; 
+    }
+
+    .top-bar__site-map-modal {
+        padding: 7.1666666667vw 0;
+        height: calc(100vh + 7.1666666667vw);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 998;
+        overflow-y: auto;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: all .5s;
+    }
+
+    .top-bar__site-map-modal .site-mpa-inner {
+        width: 100%;
+        padding: 0 2.6666666667vw;
+        margin: 0;
+    }
+
+    .top-bar__site-map-modal .site-mpa-inner > .site-map-clo {
+        padding: 0;
+    }
+
+    .top-bar__site-map-modal .site-mpa-inner > .site-map-clo > .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: .8333333333vw 0;
+        overflow: hidden;
+        gap: 0;
+    }
+
+    .top-bar__site-map-modal .site-mpa-inner > .site-map-clo > .row > h3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5vw;
+        padding: 1vw;
+        color: #555;
+        font-size: 2vw;
+        font-weight: 700;
+        line-height: 100%;
+        width: 100%;
+    }
+
+    .top-bar__site-map-modal .site-map-clo > .row > h3::after {
+        content: "";
+        display: inline-flex;
+        width: 2vw;
+        height: 2vw;
+        background-image: url(images/arrowBtnDisabled.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        transform: rotate(-90deg);
+
+    }
+
+    .top-bar__site-map-modal .site-map-clo > .row > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .6666666667vw;
+        padding: 0 1.3333333333vw;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .top-bar__site-map-modal .site-map-clo > .row > ul > li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: .6666666667vw;
+        min-width: 100%;
+    }
+}
+
+
+/* -------------- tablet 버전 끝 ------------- */
+
 /* -------------- mobile 버전 시작 ------------- */
+
+
 .mobile-top-bar {
-    display: none;
+  
 }
 
 /* -------------- mobile 버전 끝 ------------- */
+
 /*--------------- 헤더 끝 ---------------*/
 
 /*--------------- 메인 시작 ---------------*/
